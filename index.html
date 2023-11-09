@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro clock</title>
+</head>
+<style>
+    body{
+        background-color: blanchedalmond;
+    }
+    #container{
+        margin: auto;
+        align-content: center;
+        height: 460px;
+        width:220px;
+        background-color: rgb(59, 35, 35);
+    }
+    #div1,#div2{
+        height: 50%;
+        padding-top: 5px;
+    }
+    #up{
+        border-width: 8px;
+        border-style:inset;
+        border-color: skyblue;
+        margin: 20px;
+        height: 60%;
+        background-color: white;
+    }
+    .d{
+        display:flex;
+        width: 100%;
+        height: 48%;
+    }
+    .d2{
+        width: 40%;
+        height: 70%;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #d1{
+        margin-left: 5px;
+    }
+    .abc{
+       margin: 3px;
+    }
+    p{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    #div3{
+        display: flex;
+    }
+    #start,#pause,#reset{
+        padding: 10px;
+        margin: 10px;
+        height: 30%;
+        width: 40%;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .btn{
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <div id="container">
+        <div id="div1">
+            <div id="up" >
+                <label><h1 id="timing" style="text-align: center;padding:20% 8%;">00 : 00</h1></label>
+            </div>
+            <h1 style="text-align: center; color: white;">Session 1</h1>
+        </div>
+        <hr style="color: beige;">
+        <div id="div2">
+            <div class="d">
+            <div id="d1" class="d2" style="text-align: center">
+                <p  class="ab" style="text-align: center; color: white;"><b>Session time</b></p>
+                <p class="abc" ><h3 id="SessionMin" style="color: skyblue;"><b>20 min</b></h3></p>
+                <button id="plusSession" class="btn">+</button>
+                <button id="minusSession" class="btn">-</button>
+            </div>
+            <div id="d2" class="d2" style="text-align: center"; >
+                <p  class="ab" style="color: white;"><b>Break time</b></p>
+                <p class="abc" ><h3 id="BreakMin" style="color: orangered;"><b>05 min</b></h3></p>
+                <button id="plusBreak" class="btn">+</button>
+                <button id="minusBreak" class="btn">-</button>
+            </div>
+        </div>
+            <hr style="color: beige;">
+        <div id="div3">
+            <div id="start" class="div" style="background-color: rgb(22, 13, 1); display: block;">Start</div>
+            <div id="pause" class="div" style="background-color: rgb(22, 13, 1); display: none;">Pause</div>
+            <div id="reset" class="div" style="background-color: rgb(22, 13, 1);">Reset</div>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
